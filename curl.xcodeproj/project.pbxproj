@@ -27,6 +27,7 @@
 		3CB476371FF621AE00C6B265 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB476331FF621AE00C6B265 /* libssl.a */; };
 		3CB476381FF621AE00C6B265 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB476341FF621AE00C6B265 /* libcurl.a */; };
 		3CB476391FF621AE00C6B265 /* libssh2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB476351FF621AE00C6B265 /* libssh2.a */; };
+		3CB4763D1FF622F100C6B265 /* curl in Headers */ = {isa = PBXBuildFile; fileRef = 3CB4763B1FF622E200C6B265 /* curl */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		3CB476331FF621AE00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = lib/libssl.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB476341FF621AE00C6B265 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = lib/libcurl.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB476351FF621AE00C6B265 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssh2.a; path = lib/libssh2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB4763B1FF622E200C6B265 /* curl */ = {isa = PBXFileReference; lastKnownFileType = text; name = curl; path = include/curl; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		3CB4760A1FF61E2300C6B265 = {
 			isa = PBXGroup;
 			children = (
+				3CB4763A1FF622BB00C6B265 /* include */,
 				3CB476261FF61F2900C6B265 /* Dependencies */,
 				3CB476161FF61E2300C6B265 /* Framework */,
 				3CB476151FF61E2300C6B265 /* Products */,
@@ -133,6 +136,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3CB4763A1FF622BB00C6B265 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				3CB4763B1FF622E200C6B265 /* curl */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -141,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB476191FF61E2300C6B265 /* curl.h in Headers */,
+				3CB4763D1FF622F100C6B265 /* curl in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +166,6 @@
 				3CB4760F1FF61E2300C6B265 /* Sources */,
 				3CB476101FF61E2300C6B265 /* Frameworks */,
 				3CB476111FF61E2300C6B265 /* Headers */,
-				3CB476121FF61E2300C6B265 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -216,16 +227,6 @@
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
-
-/* Begin PBXResourcesBuildPhase section */
-		3CB476121FF61E2300C6B265 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		3CB476231FF61F0700C6B265 /* Build libcurl */ = {
