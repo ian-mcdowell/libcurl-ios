@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		3CB4761F1FF61E7100C6B265 /* libcurl */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3CB476201FF61E7100C6B265 /* Build configuration list for PBXAggregateTarget "libcurl" */;
+			buildPhases = (
+				3CB476231FF61F0700C6B265 /* Build libcurl */,
+			);
+			dependencies = (
+				3CB476301FF61F6F00C6B265 /* PBXTargetDependency */,
+			);
+			name = libcurl;
+			productName = libcurl;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		3CB476191FF61E2300C6B265 /* curl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB476171FF61E2300C6B265 /* curl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB476361FF621AE00C6B265 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB476321FF621AE00C6B265 /* libcrypto.a */; };
+		3CB476371FF621AE00C6B265 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB476331FF621AE00C6B265 /* libssl.a */; };
+		3CB476381FF621AE00C6B265 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB476341FF621AE00C6B265 /* libcurl.a */; };
+		3CB476391FF621AE00C6B265 /* libssh2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB476351FF621AE00C6B265 /* libssh2.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CB476241FF61F0E00C6B265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CB4760B1FF61E2300C6B265 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CB4761F1FF61E7100C6B265;
+			remoteInfo = libcurl;
+		};
+		3CB4762D1FF61F4200C6B265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CB476271FF61F4200C6B265 /* ssh2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3CB475C21FF600A700C6B265;
+			remoteInfo = ssh2;
+		};
+		3CB4762F1FF61F6F00C6B265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CB476271FF61F4200C6B265 /* ssh2.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CB475CD1FF6014000C6B265;
+			remoteInfo = libssh2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3CB476141FF61E2300C6B265 /* curl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = curl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB476171FF61E2300C6B265 /* curl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = curl.h; sourceTree = "<group>"; };
+		3CB476181FF61E2300C6B265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CB476271FF61F4200C6B265 /* ssh2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ssh2.xcodeproj; path = "Submodules/libssh2-ios/ssh2.xcodeproj"; sourceTree = "<group>"; };
+		3CB476321FF621AE00C6B265 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = lib/libcrypto.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB476331FF621AE00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = lib/libssl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB476341FF621AE00C6B265 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = lib/libcurl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB476351FF621AE00C6B265 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssh2.a; path = lib/libssh2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CB476101FF61E2300C6B265 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB476361FF621AE00C6B265 /* libcrypto.a in Frameworks */,
+				3CB476371FF621AE00C6B265 /* libssl.a in Frameworks */,
+				3CB476381FF621AE00C6B265 /* libcurl.a in Frameworks */,
+				3CB476391FF621AE00C6B265 /* libssh2.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CB4760A1FF61E2300C6B265 = {
+			isa = PBXGroup;
+			children = (
+				3CB476261FF61F2900C6B265 /* Dependencies */,
+				3CB476161FF61E2300C6B265 /* Framework */,
+				3CB476151FF61E2300C6B265 /* Products */,
+				3CB476311FF621AD00C6B265 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3CB476151FF61E2300C6B265 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CB476141FF61E2300C6B265 /* curl.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CB476161FF61E2300C6B265 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				3CB476171FF61E2300C6B265 /* curl.h */,
+				3CB476181FF61E2300C6B265 /* Info.plist */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		3CB476261FF61F2900C6B265 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				3CB476271FF61F4200C6B265 /* ssh2.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		3CB476281FF61F4200C6B265 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CB4762E1FF61F4200C6B265 /* ssh2.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CB476311FF621AD00C6B265 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CB476321FF621AE00C6B265 /* libcrypto.a */,
+				3CB476341FF621AE00C6B265 /* libcurl.a */,
+				3CB476351FF621AE00C6B265 /* libssh2.a */,
+				3CB476331FF621AE00C6B265 /* libssl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3CB476111FF61E2300C6B265 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB476191FF61E2300C6B265 /* curl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3CB476131FF61E2300C6B265 /* curl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CB4761C1FF61E2300C6B265 /* Build configuration list for PBXNativeTarget "curl" */;
+			buildPhases = (
+				3CB4760F1FF61E2300C6B265 /* Sources */,
+				3CB476101FF61E2300C6B265 /* Frameworks */,
+				3CB476111FF61E2300C6B265 /* Headers */,
+				3CB476121FF61E2300C6B265 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CB476251FF61F0E00C6B265 /* PBXTargetDependency */,
+			);
+			name = curl;
+			productName = curl;
+			productReference = 3CB476141FF61E2300C6B265 /* curl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CB4760B1FF61E2300C6B265 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Ian McDowell";
+				TargetAttributes = {
+					3CB476131FF61E2300C6B265 = {
+						CreatedOnToolsVersion = 9.2;
+					};
+					3CB4761F1FF61E7100C6B265 = {
+						CreatedOnToolsVersion = 9.2;
+					};
+				};
+			};
+			buildConfigurationList = 3CB4760E1FF61E2300C6B265 /* Build configuration list for PBXProject "curl" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3CB4760A1FF61E2300C6B265;
+			productRefGroup = 3CB476151FF61E2300C6B265 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3CB476281FF61F4200C6B265 /* Products */;
+					ProjectRef = 3CB476271FF61F4200C6B265 /* ssh2.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				3CB476131FF61E2300C6B265 /* curl */,
+				3CB4761F1FF61E7100C6B265 /* libcurl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3CB4762E1FF61F4200C6B265 /* ssh2.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ssh2.framework;
+			remoteRef = 3CB4762D1FF61F4200C6B265 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CB476121FF61E2300C6B265 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CB476231FF61F0700C6B265 /* Build libcurl */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Submodules/curl",
+			);
+			name = "Build libcurl";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/Submodules/ios-xcode-make-scripts/build-cmake-staticlib -DCURL_STATICLIB:BOOL=ON -DBUILD_CURL_EXE:BOOL=OFF -DCURL_DISABLE_LDAP:BOOL=ON -DENABLE_THREADED_RESOLVER:BOOL=OFF -DHAVE_POSIX_STRERROR_R:BOOL=ON -DHAVE_POSIX_STRERROR_R_COMPILE:BOOL=OFF -DHAVE_GLIBC_STRERROR_R:BOOL=OFF -DHAVE_GLIBC_STRERROR_R_COMPILE:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DHAVE_FSETXATTR:BOOL=OFF";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CB4760F1FF61E2300C6B265 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CB476251FF61F0E00C6B265 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CB4761F1FF61E7100C6B265 /* libcurl */;
+			targetProxy = 3CB476241FF61F0E00C6B265 /* PBXContainerItemProxy */;
+		};
+		3CB476301FF61F6F00C6B265 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libssh2;
+			targetProxy = 3CB4762F1FF61F6F00C6B265 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3CB4761A1FF61E2300C6B265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-all_load";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3CB4761B1FF61E2300C6B265 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-all_load";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3CB4761D1FF61E2300C6B265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/lib";
+				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.curl;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3CB4761E1FF61E2300C6B265 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/lib";
+				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.curl;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3CB476211FF61E7100C6B265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBNAMES = libcurl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3CB476221FF61E7100C6B265 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBNAMES = libcurl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CB4760E1FF61E2300C6B265 /* Build configuration list for PBXProject "curl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB4761A1FF61E2300C6B265 /* Debug */,
+				3CB4761B1FF61E2300C6B265 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CB4761C1FF61E2300C6B265 /* Build configuration list for PBXNativeTarget "curl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB4761D1FF61E2300C6B265 /* Debug */,
+				3CB4761E1FF61E2300C6B265 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CB476201FF61E7100C6B265 /* Build configuration list for PBXAggregateTarget "libcurl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB476211FF61E7100C6B265 /* Debug */,
+				3CB476221FF61E7100C6B265 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CB4760B1FF61E2300C6B265 /* Project object */;
+}
