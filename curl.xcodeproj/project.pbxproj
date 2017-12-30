@@ -29,11 +29,11 @@
 		3CB476141FF61E2300C6B265 /* curl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = curl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB476171FF61E2300C6B265 /* curl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = curl.h; sourceTree = "<group>"; };
 		3CB476181FF61E2300C6B265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CB476321FF621AE00C6B265 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../../../../../../../../../Volumes/Development/ThirdParty/libcurl-ios/.ibuild/build/lib/libcrypto.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB476331FF621AE00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../../../../../../../../../Volumes/Development/ThirdParty/libcurl-ios/.ibuild/build/lib/libssl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB476341FF621AE00C6B265 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = "../../../../../../../../../../Volumes/Development/ThirdParty/libcurl-ios/.ibuild/build/lib/libcurl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB476351FF621AE00C6B265 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssh2.a; path = "../../../../../../../../../../Volumes/Development/ThirdParty/libcurl-ios/.ibuild/build/lib/libssh2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB4763B1FF622E200C6B265 /* curl */ = {isa = PBXFileReference; lastKnownFileType = folder; name = curl; path = .ibuild/build/include/curl; sourceTree = SOURCE_ROOT; };
+		3CB476321FF621AE00C6B265 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ibuild/lib/libcrypto.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB476331FF621AE00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ibuild/lib/libssl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB476341FF621AE00C6B265 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ibuild/lib/libcurl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB476351FF621AE00C6B265 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssh2.a; path = ibuild/lib/libssh2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB4763B1FF622E200C6B265 /* curl */ = {isa = PBXFileReference; lastKnownFileType = text; name = curl; path = ibuild/include/curl; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,7 +327,7 @@
 				INFOPLIST_FILE = Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/.ibuild/build/lib";
+				LIBRARY_SEARCH_PATHS = "$(TARGET_BUILD_DIR)/ibuild/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.curl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -344,7 +344,7 @@
 				INFOPLIST_FILE = Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/.ibuild/build/lib";
+				LIBRARY_SEARCH_PATHS = "$(TARGET_BUILD_DIR)/ibuild/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.curl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
