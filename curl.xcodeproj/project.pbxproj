@@ -6,21 +6,6 @@
 	objectVersion = 48;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		3CB4761F1FF61E7100C6B265 /* libcurl */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 3CB476201FF61E7100C6B265 /* Build configuration list for PBXAggregateTarget "libcurl" */;
-			buildPhases = (
-				3CB476231FF61F0700C6B265 /* Build libcurl */,
-			);
-			dependencies = (
-				3CB476301FF61F6F00C6B265 /* PBXTargetDependency */,
-			);
-			name = libcurl;
-			productName = libcurl;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		3CB476191FF61E2300C6B265 /* curl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB476171FF61E2300C6B265 /* curl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB476361FF621AE00C6B265 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB476321FF621AE00C6B265 /* libcrypto.a */; };
@@ -31,26 +16,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3CB476241FF61F0E00C6B265 /* PBXContainerItemProxy */ = {
+		3CB476711FF764B500C6B265 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3CB4760B1FF61E2300C6B265 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3CB4761F1FF61E7100C6B265;
+			remoteGlobalIDString = 3CB4766D1FF7649100C6B265;
 			remoteInfo = libcurl;
-		};
-		3CB4762D1FF61F4200C6B265 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CB476271FF61F4200C6B265 /* ssh2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3CB475C21FF600A700C6B265;
-			remoteInfo = ssh2;
-		};
-		3CB4762F1FF61F6F00C6B265 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CB476271FF61F4200C6B265 /* ssh2.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 3CB475CD1FF6014000C6B265;
-			remoteInfo = libssh2;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -58,12 +29,11 @@
 		3CB476141FF61E2300C6B265 /* curl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = curl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB476171FF61E2300C6B265 /* curl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = curl.h; sourceTree = "<group>"; };
 		3CB476181FF61E2300C6B265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CB476271FF61F4200C6B265 /* ssh2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ssh2.xcodeproj; path = "Submodules/libssh2-ios/ssh2.xcodeproj"; sourceTree = "<group>"; };
-		3CB476321FF621AE00C6B265 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = lib/libcrypto.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB476331FF621AE00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = lib/libssl.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB476341FF621AE00C6B265 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = lib/libcurl.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB476351FF621AE00C6B265 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssh2.a; path = lib/libssh2.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB4763B1FF622E200C6B265 /* curl */ = {isa = PBXFileReference; lastKnownFileType = text; name = curl; path = include/curl; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB476321FF621AE00C6B265 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../../../../../../../../../Volumes/Development/ThirdParty/libcurl-ios/.ibuild/build/lib/libcrypto.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB476331FF621AE00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../../../../../../../../../Volumes/Development/ThirdParty/libcurl-ios/.ibuild/build/lib/libssl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB476341FF621AE00C6B265 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = "../../../../../../../../../../Volumes/Development/ThirdParty/libcurl-ios/.ibuild/build/lib/libcurl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB476351FF621AE00C6B265 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssh2.a; path = "../../../../../../../../../../Volumes/Development/ThirdParty/libcurl-ios/.ibuild/build/lib/libssh2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB4763B1FF622E200C6B265 /* curl */ = {isa = PBXFileReference; lastKnownFileType = folder; name = curl; path = .ibuild/build/include/curl; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				3CB4763A1FF622BB00C6B265 /* include */,
-				3CB476261FF61F2900C6B265 /* Dependencies */,
 				3CB476161FF61E2300C6B265 /* Framework */,
 				3CB476151FF61E2300C6B265 /* Products */,
 				3CB476311FF621AD00C6B265 /* Frameworks */,
@@ -107,22 +76,6 @@
 				3CB476181FF61E2300C6B265 /* Info.plist */,
 			);
 			path = Framework;
-			sourceTree = "<group>";
-		};
-		3CB476261FF61F2900C6B265 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				3CB476271FF61F4200C6B265 /* ssh2.xcodeproj */,
-			);
-			name = Dependencies;
-			sourceTree = "<group>";
-		};
-		3CB476281FF61F4200C6B265 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3CB4762E1FF61F4200C6B265 /* ssh2.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		3CB476311FF621AD00C6B265 /* Frameworks */ = {
@@ -158,6 +111,23 @@
 		};
 /* End PBXHeadersBuildPhase section */
 
+/* Begin PBXLegacyTarget section */
+		3CB4766D1FF7649100C6B265 /* libcurl */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 3CB4766E1FF7649100C6B265 /* Build configuration list for PBXLegacyTarget "libcurl" */;
+			buildPhases = (
+			);
+			buildToolPath = "$(SRCROOT)/Submodules/ibuild/ibuild";
+			buildWorkingDirectory = "$(SRCROOT)";
+			dependencies = (
+			);
+			name = libcurl;
+			passBuildSettingsInEnvironment = 1;
+			productName = libcurl;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		3CB476131FF61E2300C6B265 /* curl */ = {
 			isa = PBXNativeTarget;
@@ -170,7 +140,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				3CB476251FF61F0E00C6B265 /* PBXTargetDependency */,
+				3CB476721FF764B500C6B265 /* PBXTargetDependency */,
 			);
 			name = curl;
 			productName = curl;
@@ -189,7 +159,7 @@
 					3CB476131FF61E2300C6B265 = {
 						CreatedOnToolsVersion = 9.2;
 					};
-					3CB4761F1FF61E7100C6B265 = {
+					3CB4766D1FF7649100C6B265 = {
 						CreatedOnToolsVersion = 9.2;
 					};
 				};
@@ -204,48 +174,13 @@
 			mainGroup = 3CB4760A1FF61E2300C6B265;
 			productRefGroup = 3CB476151FF61E2300C6B265 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 3CB476281FF61F4200C6B265 /* Products */;
-					ProjectRef = 3CB476271FF61F4200C6B265 /* ssh2.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				3CB476131FF61E2300C6B265 /* curl */,
-				3CB4761F1FF61E7100C6B265 /* libcurl */,
+				3CB4766D1FF7649100C6B265 /* libcurl */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		3CB4762E1FF61F4200C6B265 /* ssh2.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ssh2.framework;
-			remoteRef = 3CB4762D1FF61F4200C6B265 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3CB476231FF61F0700C6B265 /* Build libcurl */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Submodules/curl",
-			);
-			name = "Build libcurl";
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/lib/libcurl.a",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "$SRCROOT/Submodules/ios-xcode-make-scripts/build-cmake-staticlib -DCURL_STATICLIB:BOOL=ON -DBUILD_CURL_EXE:BOOL=OFF -DCURL_DISABLE_LDAP:BOOL=ON -DENABLE_THREADED_RESOLVER:BOOL=OFF -DHAVE_POSIX_STRERROR_R:BOOL=ON -DHAVE_POSIX_STRERROR_R_COMPILE:BOOL=OFF -DHAVE_GLIBC_STRERROR_R:BOOL=OFF -DHAVE_GLIBC_STRERROR_R_COMPILE:BOOL=OFF -DBUILD_TESTING:BOOL=OFF -DHAVE_FSETXATTR:BOOL=OFF";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3CB4760F1FF61E2300C6B265 /* Sources */ = {
@@ -258,15 +193,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3CB476251FF61F0E00C6B265 /* PBXTargetDependency */ = {
+		3CB476721FF764B500C6B265 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3CB4761F1FF61E7100C6B265 /* libcurl */;
-			targetProxy = 3CB476241FF61F0E00C6B265 /* PBXContainerItemProxy */;
-		};
-		3CB476301FF61F6F00C6B265 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = libssh2;
-			targetProxy = 3CB4762F1FF61F6F00C6B265 /* PBXContainerItemProxy */;
+			target = 3CB4766D1FF7649100C6B265 /* libcurl */;
+			targetProxy = 3CB476711FF764B500C6B265 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -397,7 +327,7 @@
 				INFOPLIST_FILE = Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/lib";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/.ibuild/build/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.curl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -414,25 +344,32 @@
 				INFOPLIST_FILE = Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/lib";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/.ibuild/build/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.curl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		3CB476211FF61E7100C6B265 /* Debug */ = {
+		3CB4766F1FF7649100C6B265 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBNAMES = libcurl;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		3CB476221FF61E7100C6B265 /* Release */ = {
+		3CB476701FF7649100C6B265 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBNAMES = libcurl;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -458,11 +395,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3CB476201FF61E7100C6B265 /* Build configuration list for PBXAggregateTarget "libcurl" */ = {
+		3CB4766E1FF7649100C6B265 /* Build configuration list for PBXLegacyTarget "libcurl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3CB476211FF61E7100C6B265 /* Debug */,
-				3CB476221FF61E7100C6B265 /* Release */,
+				3CB4766F1FF7649100C6B265 /* Debug */,
+				3CB476701FF7649100C6B265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

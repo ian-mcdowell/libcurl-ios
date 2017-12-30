@@ -1,11 +1,4 @@
-[submodule "Submodules/ios-xcode-make-scripts"]
-	path = Submodules/ios-xcode-make-scripts
-	url = https://github.com/IMcD23/ios-xcode-make-scripts.git
-	branch = master
-[submodule "Submodules/curl"]
-	path = Submodules/curl
-	url = https://github.com/curl/curl.git
-[submodule "Submodules/libssh2-ios"]
-	path = Submodules/libssh2-ios
-	url = https://github.com/IMcD23/libssh2-ios.git
+[submodule "Submodules/ibuild"]
+	path = Submodules/ibuild
+	url = https://github.com/IMcD23/ibuild.git
 	branch = master

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>libcurl-ios</string>
+	<key>url</key>
+	<string>https://github.com/IMcD23/libcurl-ios.git</string>
+	<key>library</key>
+	<dict>
+		<key>url</key>
+		<string>https://github.com/curl/curl.git</string>
+		<key>branch</key>
+		<string>master</string>
+	</dict>
+	<key>dependencies</key>
+	<array>
+		<dict>
+			<key>url</key>
+			<string>https://github.com/IMcD23/libssh2-ios.git</string>
+			<key>branch</key>
+			<string>master</string>
+		</dict>
+	</array>
+	<key>libraryOutputs</key>
+	<array>
+		<string>libcurl</string>
+	</array>
+	<key>buildSystem</key>
+	<string>cmake</string>
+	<key>buildArgs</key>
+	<array>
+		<string>-DCURL_STATICLIB:BOOL=ON</string>
+		<string>-DBUILD_CURL_EXE:BOOL=OFF</string>
+		<string>-DCURL_DISABLE_LDAP:BOOL=ON</string>
+		<string>-DENABLE_THREADED_RESOLVER:BOOL=OFF</string>
+		<string>-DHAVE_POSIX_STRERROR_R:BOOL=ON</string>
+		<string>-DHAVE_POSIX_STRERROR_R_COMPILE:BOOL=OFF</string>
+		<string>-DHAVE_GLIBC_STRERROR_R:BOOL=OFF</string>
+		<string>-DHAVE_GLIBC_STRERROR_R_COMPILE:BOOL=OFF</string>
+		<string>-DBUILD_TESTING:BOOL=OFF</string>
+		<string>-DHAVE_FSETXATTR:BOOL=OFF</string>
+		<string>-DOPENSSL_ROOT_DIR=$#BUILDROOT#</string>
+	</array>
+</dict>
+</plist>
