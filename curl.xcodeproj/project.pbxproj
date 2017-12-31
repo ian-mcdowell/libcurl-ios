@@ -327,7 +327,7 @@
 				INFOPLIST_FILE = Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(TARGET_BUILD_DIR)/ibuild/lib";
+				LIBRARY_SEARCH_PATHS = "$(CONFIGURATION_BUILD_DIR)/ibuild/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.curl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -344,7 +344,7 @@
 				INFOPLIST_FILE = Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(TARGET_BUILD_DIR)/ibuild/lib";
+				LIBRARY_SEARCH_PATHS = "$(CONFIGURATION_BUILD_DIR)/ibuild/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.curl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
