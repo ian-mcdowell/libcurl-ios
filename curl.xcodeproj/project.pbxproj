@@ -34,6 +34,7 @@
 		3CB476341FF621AE00C6B265 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ibuild/lib/libcurl.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB476351FF621AE00C6B265 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssh2.a; path = ibuild/lib/libssh2.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB4763B1FF622E200C6B265 /* curl */ = {isa = PBXFileReference; lastKnownFileType = text; name = curl; path = ibuild/include/curl; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CE064B1200DF12700680549 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 			children = (
 				3CB476171FF61E2300C6B265 /* curl.h */,
 				3CB476181FF61E2300C6B265 /* Info.plist */,
+				3CE064B1200DF12700680549 /* module.modulemap */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
