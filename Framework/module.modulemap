@@ -1,4 +1,4 @@
-module curl [system] {
+framework module curl [system] {
     umbrella header "curl.h"
     export *
 }

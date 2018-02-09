@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CB476191FF61E2300C6B265 /* curl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB476171FF61E2300C6B265 /* curl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB476361FF621AE00C6B265 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB476321FF621AE00C6B265 /* libcrypto.a */; };
 		3CB476371FF621AE00C6B265 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB476331FF621AE00C6B265 /* libssl.a */; };
 		3CB476381FF621AE00C6B265 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB476341FF621AE00C6B265 /* libcurl.a */; };
 		3CB476391FF621AE00C6B265 /* libssh2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB476351FF621AE00C6B265 /* libssh2.a */; };
-		3CB4763D1FF622F100C6B265 /* curl in Headers */ = {isa = PBXBuildFile; fileRef = 3CB4763B1FF622E200C6B265 /* curl */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CD59E42202E0091002298B4 /* curl_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD59E41202E0091002298B4 /* curl_tests.m */; };
+		3CD59E44202E0091002298B4 /* curl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB476141FF61E2300C6B265 /* curl.framework */; };
+		3CD59E4D202E0CC1002298B4 /* curl_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD59E4A202E00CF002298B4 /* curl_tests.swift */; };
+		3CD59E4F202E0E9F002298B4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD59E4E202E0E9F002298B4 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,17 +25,27 @@
 			remoteGlobalIDString = 3CB4766D1FF7649100C6B265;
 			remoteInfo = libcurl;
 		};
+		3CD59E45202E0091002298B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CB4760B1FF61E2300C6B265 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CB476131FF61E2300C6B265;
+			remoteInfo = curl;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3CB476141FF61E2300C6B265 /* curl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = curl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB476171FF61E2300C6B265 /* curl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = curl.h; sourceTree = "<group>"; };
 		3CB476181FF61E2300C6B265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CB476321FF621AE00C6B265 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ibuild/lib/libcrypto.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB476331FF621AE00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ibuild/lib/libssl.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB476341FF621AE00C6B265 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ibuild/lib/libcurl.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB476351FF621AE00C6B265 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssh2.a; path = ibuild/lib/libssh2.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB4763B1FF622E200C6B265 /* curl */ = {isa = PBXFileReference; lastKnownFileType = text; name = curl; path = ibuild/include/curl; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CD59E3F202E0091002298B4 /* tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CD59E41202E0091002298B4 /* curl_tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = curl_tests.m; sourceTree = "<group>"; };
+		3CD59E43202E0091002298B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CD59E4A202E00CF002298B4 /* curl_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = curl_tests.swift; sourceTree = "<group>"; };
+		3CD59E4E202E0E9F002298B4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3CE064B1200DF12700680549 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,10 +54,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CD59E4F202E0E9F002298B4 /* libz.tbd in Frameworks */,
 				3CB476361FF621AE00C6B265 /* libcrypto.a in Frameworks */,
 				3CB476371FF621AE00C6B265 /* libssl.a in Frameworks */,
 				3CB476381FF621AE00C6B265 /* libcurl.a in Frameworks */,
 				3CB476391FF621AE00C6B265 /* libssh2.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CD59E3C202E0091002298B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CD59E44202E0091002298B4 /* curl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,8 +76,8 @@
 		3CB4760A1FF61E2300C6B265 = {
 			isa = PBXGroup;
 			children = (
-				3CB4763A1FF622BB00C6B265 /* include */,
 				3CB476161FF61E2300C6B265 /* Framework */,
+				3CD59E40202E0091002298B4 /* Tests */,
 				3CB476151FF61E2300C6B265 /* Products */,
 				3CB476311FF621AD00C6B265 /* Frameworks */,
 			);
@@ -66,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				3CB476141FF61E2300C6B265 /* curl.framework */,
+				3CD59E3F202E0091002298B4 /* tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,7 +95,6 @@
 		3CB476161FF61E2300C6B265 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				3CB476171FF61E2300C6B265 /* curl.h */,
 				3CB476181FF61E2300C6B265 /* Info.plist */,
 				3CE064B1200DF12700680549 /* module.modulemap */,
 			);
@@ -83,6 +104,7 @@
 		3CB476311FF621AD00C6B265 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3CD59E4E202E0E9F002298B4 /* libz.tbd */,
 				3CB476321FF621AE00C6B265 /* libcrypto.a */,
 				3CB476341FF621AE00C6B265 /* libcurl.a */,
 				3CB476351FF621AE00C6B265 /* libssh2.a */,
@@ -91,27 +113,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3CB4763A1FF622BB00C6B265 /* include */ = {
+		3CD59E40202E0091002298B4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				3CB4763B1FF622E200C6B265 /* curl */,
+				3CD59E41202E0091002298B4 /* curl_tests.m */,
+				3CD59E4A202E00CF002298B4 /* curl_tests.swift */,
+				3CD59E43202E0091002298B4 /* Info.plist */,
 			);
-			name = include;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		3CB476111FF61E2300C6B265 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3CB476191FF61E2300C6B265 /* curl.h in Headers */,
-				3CB4763D1FF622F100C6B265 /* curl in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXLegacyTarget section */
 		3CB4766D1FF7649100C6B265 /* libcurl */ = {
@@ -120,7 +132,7 @@
 			buildConfigurationList = 3CB4766E1FF7649100C6B265 /* Build configuration list for PBXLegacyTarget "libcurl" */;
 			buildPhases = (
 			);
-			buildToolPath = "$(SRCROOT)/Submodules/ibuild/ibuild";
+			buildToolPath = /usr/local/bin/ibuild;
 			buildWorkingDirectory = "$(SRCROOT)";
 			dependencies = (
 			);
@@ -137,7 +149,7 @@
 			buildPhases = (
 				3CB4760F1FF61E2300C6B265 /* Sources */,
 				3CB476101FF61E2300C6B265 /* Frameworks */,
-				3CB476111FF61E2300C6B265 /* Headers */,
+				3CD59E4C202E0BFD002298B4 /* Copy Headers */,
 			);
 			buildRules = (
 			);
@@ -148,6 +160,24 @@
 			productName = curl;
 			productReference = 3CB476141FF61E2300C6B265 /* curl.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		3CD59E3E202E0091002298B4 /* tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CD59E47202E0091002298B4 /* Build configuration list for PBXNativeTarget "tests" */;
+			buildPhases = (
+				3CD59E3B202E0091002298B4 /* Sources */,
+				3CD59E3C202E0091002298B4 /* Frameworks */,
+				3CD59E3D202E0091002298B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CD59E46202E0091002298B4 /* PBXTargetDependency */,
+			);
+			name = tests;
+			productName = tests;
+			productReference = 3CD59E3F202E0091002298B4 /* tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -160,9 +190,14 @@
 				TargetAttributes = {
 					3CB476131FF61E2300C6B265 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 					};
 					3CB4766D1FF7649100C6B265 = {
 						CreatedOnToolsVersion = 9.2;
+					};
+					3CD59E3E202E0091002298B4 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -180,15 +215,54 @@
 			targets = (
 				3CB476131FF61E2300C6B265 /* curl */,
 				3CB4766D1FF7649100C6B265 /* libcurl */,
+				3CD59E3E202E0091002298B4 /* tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CD59E3D202E0091002298B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CD59E4C202E0BFD002298B4 /* Copy Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/ibuild/include/curl/*",
+			);
+			name = "Copy Headers";
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/curl.framework/Headers/",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -R ${SCRIPT_INPUT_FILE_0} ${SCRIPT_OUTPUT_FILE_0}";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3CB4760F1FF61E2300C6B265 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CD59E3B202E0091002298B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CD59E42202E0091002298B4 /* curl_tests.m in Sources */,
+				3CD59E4D202E0CC1002298B4 /* curl_tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +273,11 @@
 			isa = PBXTargetDependency;
 			target = 3CB4766D1FF7649100C6B265 /* libcurl */;
 			targetProxy = 3CB476711FF764B500C6B265 /* PBXContainerItemProxy */;
+		};
+		3CD59E46202E0091002298B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CB476131FF61E2300C6B265 /* curl */;
+			targetProxy = 3CD59E45202E0091002298B4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -236,6 +315,7 @@
 				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -256,8 +336,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -297,6 +379,7 @@
 				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -310,8 +393,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -322,6 +407,7 @@
 		3CB4761D1FF61E2300C6B265 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -330,15 +416,20 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(CONFIGURATION_BUILD_DIR)/ibuild/lib";
+				MODULEMAP_FILE = Framework/module.modulemap;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.curl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		3CB4761E1FF61E2300C6B265 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -347,9 +438,12 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(CONFIGURATION_BUILD_DIR)/ibuild/lib";
+				MODULEMAP_FILE = Framework/module.modulemap;
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.curl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -372,6 +466,31 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3CD59E48202E0091002298B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3CD59E49202E0091002298B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -402,6 +521,15 @@
 			buildConfigurations = (
 				3CB4766F1FF7649100C6B265 /* Debug */,
 				3CB476701FF7649100C6B265 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CD59E47202E0091002298B4 /* Build configuration list for PBXNativeTarget "tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CD59E48202E0091002298B4 /* Debug */,
+				3CD59E49202E0091002298B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
