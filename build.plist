@@ -13,7 +13,7 @@
 			<key>path</key>
 			<string>curl/curl</string>
 			<key>branch</key>
-			<string>curl-7_58_0</string>
+			<string>master</string>
 		</dict>
 		<key>buildSystem</key>
 		<string>cmake</string>

@@ -4,31 +4,20 @@ env:
   global:
     - LC_CTYPE=en_US.UTF-8
     - LANG=en_US.UTF-8
-    - PROJECT=curl.xcodeproj
-    - IOS_FRAMEWORK_SCHEME="curl"
-    - IOS_SIM_SDK=iphonesimulator11.2
-    - IOS_DEV_SDK=iphoneos11.2
-  matrix:
-    - SCHEME="$IOS_FRAMEWORK_SCHEME" SDK="$IOS_SIM_SDK"
-    - SCHEME="$IOS_FRAMEWORK_SCHEME" SDK="$IOS_DEV_SDK"
 script:
-  - set -o pipefail
-  - brew install IMcD23/brew/ibuild
-  - xcodebuild -version
-  - xcodebuild -showsdks
-  - xcodebuild -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES build;
-
-branches:
-  only:
-    - master
+- set -o pipefail
+- brew install IMcD23/brew/ibuild
+- xcodebuild -version
+- xcodebuild -showsdks
+- carthage build --no-skip-current --verbose
 before_deploy:
-  - set -o pipefail
-  - carthage build --no-skip-current
-  - carthage archive curl
+- set -o pipefail
+- carthage archive curl
 deploy:
   provider: releases
   api_key:
-    secure: VuXHR7ZMkxiPOzauG8kVyc3WkUVR0uRbNiax3J6HVBtynMI12s9M3NYZ3BgTClD1FZCDYFMFsOyRZKC9OFY09sxBtvNxrcfDCeOhTz8bNpOyTcnXuX1XKejakRnPBxJ0WpFRSgtxvPcTzsnPNbqgktmpjooIRMZWplc440ibcgn9ekrxP7fk1HUbpxfB70WCyIfd9HhKxIQDOe09FdhRbIf/rVhjzUCPOJwS4lzn/fpxijfOV107w0SjmFxalB5ND13M3AZ/ZruZ53zNrhPBup3OJKFX/lWiOZOlhcz1fxI+xBU+lPrwmY6Nx09KJ3ntfVb/9ejTEw9XI5OdqJ/cl1/NOo8fqv9BOKmuRdvTqPojaOqBDlgQxGXdHhKMwGO5Ij9QZJ609MfyFpU2lQ/XWm9vmSurH+R1hb++lfklmvIoq+vZe4L4WT8N4YskpH3RcEA6OBcxuadagHWyE9ZP3r2qkwQt8c3TR5ljZoz3wCXHZLQH3xTofH50QC15rNLaRNU5BZeawdAxmktnSPGA6lCpFdp6Hz9E+KlJwQa9Wg7mGlV3IcyxvmVe36bXujH3NPyCW1tMA/hrCHlIoQILfI927fai829Y9rrRFcSaLj7rBrcwEcmTLbR0VrutB+MAplfdYWwYzQkEQArtgYK3R68q1PyCu3dQwNJIqsp0HJc=
-  file: curl.framework
+    secure: U31EXAYWrakI6uBID3j3jbh4JcQJvqpSeZYaMc+HW9165aoF6xRmLjkYDQqfZWIxUQN75LSrupUD1YYXKmPoHPITjYb5n3Vv0805eDnY6Mu5pEBPrEB8dF/++UZq2mVdUuVF+mk05fnz+DEf+/LaoRCw1TxsZBcqMEyVRfG44+6yuQC16W1uooMQP07YLGPdeWmOU+FFRTqNF7dXv/hkc+kMmN6eqKwWBtQCV6EYFy2LR8s1L8OfK4mXuKIpOXNKqhT5m03Jt2lhRlST9jxXWTBFddIAWgGPFt+nCvazp85hgJEy/083oF5YjTeU2SyMzWUtV8kqfRwFg755ekzc/N9F75MW9ghBKMZM8KaZmfWw1QGlan15jskLar0pGfEBDJMjdJT6dKs3zVqiqMBnDm2RQvUWQmDbj/ajAbSQJ4/U+RJ2WBvTafQdv84gbhi4MFFEijdUGYKCsjMBKiXDValcEJm3NVefaSUihkBmASCK66hnr0IjpnFfqACYqaQzy0tG1YR8EkGPiynztBLjY1bEXB8e+y5UOU+RHiNeDmInU12nEBtUyEeBWgog7CPHPR2p9eSrtppV6Und1Oc8rPcgQEyT5LlxBFNHv3d4oyg0NPf11vddqLsc/4IN7eBHEZjiJ+tNqCWNdUXpEuIEoCIeR35a9U8s3v13PvIZM4U=
+  file: curl.framework.zip
+  skip_cleanup: true
   on:
     tags: true
