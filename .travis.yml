@@ -21,3 +21,14 @@ script:
 branches:
   only:
     - master
+before_deploy:
+  - set -o pipefail
+  - carthage build --no-skip-current
+  - carthage archive curl
+deploy:
+  provider: releases
+  api_key:
+    secure: VuXHR7ZMkxiPOzauG8kVyc3WkUVR0uRbNiax3J6HVBtynMI12s9M3NYZ3BgTClD1FZCDYFMFsOyRZKC9OFY09sxBtvNxrcfDCeOhTz8bNpOyTcnXuX1XKejakRnPBxJ0WpFRSgtxvPcTzsnPNbqgktmpjooIRMZWplc440ibcgn9ekrxP7fk1HUbpxfB70WCyIfd9HhKxIQDOe09FdhRbIf/rVhjzUCPOJwS4lzn/fpxijfOV107w0SjmFxalB5ND13M3AZ/ZruZ53zNrhPBup3OJKFX/lWiOZOlhcz1fxI+xBU+lPrwmY6Nx09KJ3ntfVb/9ejTEw9XI5OdqJ/cl1/NOo8fqv9BOKmuRdvTqPojaOqBDlgQxGXdHhKMwGO5Ij9QZJ609MfyFpU2lQ/XWm9vmSurH+R1hb++lfklmvIoq+vZe4L4WT8N4YskpH3RcEA6OBcxuadagHWyE9ZP3r2qkwQt8c3TR5ljZoz3wCXHZLQH3xTofH50QC15rNLaRNU5BZeawdAxmktnSPGA6lCpFdp6Hz9E+KlJwQa9Wg7mGlV3IcyxvmVe36bXujH3NPyCW1tMA/hrCHlIoQILfI927fai829Y9rrRFcSaLj7rBrcwEcmTLbR0VrutB+MAplfdYWwYzQkEQArtgYK3R68q1PyCu3dQwNJIqsp0HJc=
+  file: curl.framework
+  on:
+    tags: true

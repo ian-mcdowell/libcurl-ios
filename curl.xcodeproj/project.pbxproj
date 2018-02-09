@@ -237,7 +237,7 @@
 			files = (
 			);
 			inputPaths = (
-				"$(TARGET_BUILD_DIR)/ibuild/include/curl/*",
+				"$(CONFIGURATION_BUILD_DIR)/ibuild/include/curl/*",
 			);
 			name = "Copy Headers";
 			outputPaths = (
