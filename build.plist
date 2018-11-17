@@ -19,7 +19,7 @@
 		<string>cmake</string>
 		<key>buildArgs</key>
 		<array>
-			<string>-DCURL_STATICLIB:BOOL=ON</string>
+			<string>-DBUILD_SHARED_LIBS:BOOL=OFF</string>
 			<string>-DBUILD_CURL_EXE:BOOL=OFF</string>
 			<string>-DCURL_DISABLE_LDAP:BOOL=ON</string>
 			<string>-DENABLE_THREADED_RESOLVER:BOOL=OFF</string>
