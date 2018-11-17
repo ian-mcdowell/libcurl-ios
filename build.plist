@@ -38,7 +38,7 @@
 		<key>auxiliaryFiles</key>
 		<dict>
 			<key>Framework/module.modulemap</key>
-			<string>include/module.modulemap</string>
+			<string>include/curl/module.modulemap</string>
 		</dict>
 	</dict>
 	<key>dependencies</key>
